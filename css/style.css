@@ -1,0 +1,101 @@
+body{
+  font-family: Calibri, sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.header{
+  height: 100px;
+  background-color: rgb(245, 245, 245);
+  border-bottom: 1px solid rgb(216, 216, 216);
+  position: relative;
+}
+.parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.block {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-left: 10px;    
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.prefix-Dialog {
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  color: black;
+  top: -25px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  display: none;
+  pointer-events: none;
+}
+.prefix-Dialog::after{
+  content: ''; 
+  position: absolute; 
+  left: 40px; bottom: 110px;
+  border: 20px solid transparent;	
+  border-bottom: 20px solid white;}
+
+.prefix-Dialog.active {
+  display: block;
+  pointer-events: auto;
+}
+.prefix-Dialog > div {
+  width: 300px;
+  height: 70px;
+  border: 1px solid silver;  
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+    
+  position: relative;
+  margin-top: 0px;
+  padding: 16px 16px 13px 16px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff);
+  background: -webkit-linear-gradient(#fff);
+  background: -o-linear-gradient(#fff);
+}
+.prefix-Dialog form{
+  width: 100%;
+}
+.prefix-Dialog form .text{
+  width: 200px;
+}
+.prefix-close {
+position: absolute;
+top: 10px;
+right: 10px;padding: 0;
+width: 20px;
+height: 20px;
+text-align: center;
+text-decoration: none;
+font-weight: bold;
+line-height: 20px;
+-webkit-transition: all ease .8s;
+-moz-transition: all ease .8s;
+-ms-transition: all ease .8s;
+-o-transition: all ease .8s;
+transition: all ease .8s;
+}
+.prefix-close:before {
+color: rgba(20, 50, 50, 0.9);
+content: "X";
+text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+font-size: 12px;
+}
+.prefix-close:hover {
+background-color: rgba(252, 20, 0, 0.8);
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(360deg);
+}

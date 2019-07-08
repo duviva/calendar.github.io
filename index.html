@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Календарь</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+  </head>
+  <body>
+    <div class="header">
+      <form>
+        <button  href="#" class="btn prefix-open" type="submit">Добавить</button>
+        <button class="btn" type="submit">Обновить</button>
+        <div class="d5">
+          <button type="submit"> &#128269; </button>
+          <input type="text" placeholder="Событие, дата или участник">
+        </div>
+      </form>
+    </div>
+    <div class="d5">
+      </div>
+    <div class="parent">
+      <div class="block">
+        <div id="caleandar">
+        </div>
+      </div>
+    </div>
+    <!-- Модальное окно-->
+    <div id="Modal" class="prefix-Dialog">
+      <div>
+     <div class="prefix-tabs">
+     <form>
+       <input type="text" class="text" placeholder="5 марта, 14:00, день рождения">
+       <br />
+       <br />
+       <input type="submit" value="Отправить">
+     </form>
+     </div>
+     <a class="prefix-close" title="Закрыть" href="#close"></a>
+      </div>
+   </div>
+   <!--/Модальное окно-->
+    <script type="text/javascript" src="js/caleandar.js"></script>
+    <script type="text/javascript" src="js/records.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', openModal, false);
+      
+      function openModal() {
+      [].forEach.call(document.querySelectorAll('.prefix-open, .prefix-close'), function(item) {
+              item.addEventListener('click', function(event) {
+                  event.preventDefault();
+                  document.querySelector('#Modal').classList.toggle('active');
+              });
+      });
+      }
+      
+      </script>
+  </body>
+</html>
